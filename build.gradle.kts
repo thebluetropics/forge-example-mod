@@ -2,6 +2,7 @@ plugins {
   id("idea")
   id("net.minecraftforge.gradle") version "6.0.29"
   id("org.parchmentmc.librarian.forgegradle") version "1.+"
+  id("org.spongepowered.mixin") version "0.7.38"
 }
 
 val minecraft_version = properties["minecraft_version"] as String
@@ -35,6 +36,10 @@ minecraft {
   }
 }
 
+mixin {
+  config("examplemod.mixins.json")
+}
+
 dependencies {
   minecraft("net.minecraftforge:forge:${minecraft_version}-${properties["forge_version"].toString()}")
   implementation("net.sf.jopt-simple:jopt-simple:5.0.4") {
@@ -42,6 +47,7 @@ dependencies {
       strictly("5.0.4")
     }
   }
+  annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
 }
 
 tasks.withType(JavaCompile::class.java).configureEach {

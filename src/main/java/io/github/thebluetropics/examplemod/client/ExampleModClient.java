@@ -10,6 +10,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ExampleModClient {
   @SubscribeEvent
   public static void clientSetup(FMLClientSetupEvent event) {
-    ExampleMod.LOGGER.info("Hello, World!");
+    ExampleMod.LOGGER.info("Hello, World! (Client Setup)");
   }
 }
