@@ -1,19 +1,18 @@
 package io.github.thebluetropics.examplemod;
 
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod(ExampleMod.ID)
 public class ExampleMod {
   public static final String ID = "examplemod";
-  public static final Logger LOGGER = LoggerFactory.getLogger(ID);
+  public static final Logger LOGGER = LogManager.getLogger(ID);
 
   public ExampleMod() {
-    IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    var modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
     modEventBus.addListener(this::commonSetup);
   }
 

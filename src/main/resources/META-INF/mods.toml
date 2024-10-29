@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[0,)"
+loaderVersion="[37,)"
 license="MIT"
 
 [[mods]]
@@ -12,13 +12,13 @@ description="An Example Mod"
 [[dependencies.examplemod]]
     modId="forge"
     mandatory=true
-    versionRange="[0,)"
+    versionRange="[37,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="1.18.2"
+    versionRange="1.17.1"
     ordering="NONE"
     side="BOTH"
