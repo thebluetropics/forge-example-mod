@@ -1,6 +1,5 @@
 plugins {
   id "net.minecraftforge.gradle" version "5.1.+"
-  id "org.spongepowered.mixin" version "0.7.38"
 }
 
 base {
@@ -14,7 +13,7 @@ java {
 }
 
 minecraft {
-  mappings channel: "snapshot", version: "20200514-1.15.1"
+  mappings channel: "snapshot", version: "20190719-1.14.3"
 
   runs {
     client {
@@ -43,13 +42,8 @@ minecraft {
   }
 }
 
-mixin {
-  config "examplemod.mixins.json"
-}
-
 dependencies {
   minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-  annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
 }
 
 tasks.withType(JavaCompile.class).configureEach {
