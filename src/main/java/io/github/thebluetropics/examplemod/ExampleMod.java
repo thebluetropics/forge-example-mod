@@ -1,5 +1,6 @@
 package io.github.thebluetropics.examplemod;
 
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -12,7 +13,7 @@ public class ExampleMod {
   public static final Logger LOGGER = LogManager.getLogger(ID);
 
   public ExampleMod() {
-    var modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
     modEventBus.addListener(this::commonSetup);
   }
 
