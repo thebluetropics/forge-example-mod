@@ -12,8 +12,8 @@ public class ExampleMod {
   public static final String ID = "example_mod";
   public static final Logger LOGGER = LoggerFactory.getLogger(ID);
 
-  public ExampleMod(FMLJavaModLoadingContext context) {
-    IEventBus modEventBus = context.getModEventBus();
+  public ExampleMod() {
+    IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
     modEventBus.addListener(this::commonSetup);
   }
 
