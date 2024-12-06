@@ -3,7 +3,7 @@ loaderVersion="[0,)"
 license="MIT"
 
 [[mods]]
-modId="examplemod"
+modId="example_mod"
 version="0.1.0-alpha"
 displayName="Example Mod"
 authors="thebluetropics"

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 @Mod(ExampleMod.ID)
 public class ExampleMod {
-  public static final String ID = "examplemod";
+  public static final String ID = "example_mod";
   public static final Logger LOGGER = LoggerFactory.getLogger(ID);
 
   public ExampleMod(FMLJavaModLoadingContext context) {
